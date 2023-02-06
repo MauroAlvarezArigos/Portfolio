@@ -1,0 +1,9 @@
+.row{
+    background-color: black;
+}
+footer{
+    color: white;
+    font-size: 14px;
+    text-align: right;
+    box-shadow: 2px -2px 5px #999;
+}
