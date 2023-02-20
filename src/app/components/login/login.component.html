@@ -1,0 +1,22 @@
+<div class="center">
+  <div class="login">
+      <h1>Iniciar Sesión</h1>
+      <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+          <div class="txt_field">
+              <input type="text" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required autofocus>
+              <span></span>
+              <label for="username"><i class="uil uil-user"></i> Nombre de Usuario</label>
+          </div>
+          <div class="txt_field">
+              <input type="password" id="password" name="password" [(ngModel)]="password" required>
+              <span></span>
+              <label for="password"><i class="uil uil-lock"></i> Contraseña </label>
+          </div>
+          <!-- <a class="pass" href="/recuperarpwd">¿Olvidaste tu contraseña?</a> -->
+          <button type="submit">Iniciar Sesión</button>
+          <div class="signup_link">
+              ¿No tienes una cuenta? <a href="/signup">Registrarse</a>
+          </div>
+      </form>
+  </div>
+</div>
