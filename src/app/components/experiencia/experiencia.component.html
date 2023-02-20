@@ -1,48 +1,32 @@
 <div class="container">
-    <div class="card">
-        <div class="row">
-            <h1>Experiencia Laboral</h1>
-            <div class="col-lg-1"></div>
+    <div class="row">
+        <div class="card">
+            <h1>Experiencia Laboral <button type="button" class="btn btn-outline-dark" routerLink="/nueva-experiencia"
+                    *ngIf="isLogged">Nueva Experiencia</button></h1>
+
+            <div class="col lg 1"></div>
             <div class="col-lg-11">
-                <ul>
-                    <li>
-                        <h1>Trabajo 1</h1> - <h3>(years)</h3>
-                    </li>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil necessitatibus, voluptatum
-                        eveniet
-                        magnam
-                        illo voluptatem dignissimos eum consequuntur dicta reprehenderit, quia dolores molestiae a alias
-                        minus
-                        sequi. Voluptatum, voluptates eum.
-                    </p>
-                </ul>
-                <ul>
-                    <li>
-                        <h1>Trabajo 2</h1> - <h3>(years)</h3>
-                    </li>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil necessitatibus, voluptatum
-                        eveniet
-                        magnam
-                        illo voluptatem dignissimos eum consequuntur dicta reprehenderit, quia dolores molestiae a alias
-                        minus
-                        sequi. Voluptatum, voluptates eum.
-                    </p>
-                </ul>
-                <ul>
-                    <li>
-                        <h1>Trabajo 3</h1> - <h3>(years)</h3>
-                    </li>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil necessitatibus, voluptatum
-                        eveniet
-                        magnam
-                        illo voluptatem dignissimos eum consequuntur dicta reprehenderit, quia dolores molestiae a alias
-                        minus
-                        sequi. Voluptatum, voluptates eum.
-                    </p>
-                </ul>
+                <table class="table">
+                    <tbody>
+                        <tr *ngFor="let Experiencia of xp">
+                            <td>
+                                <h3>{{Experiencia.nombreE}}</h3>
+                            </td>
+                            <td>{{Experiencia.descripcionE}}</td>
+                            <td *ngIf="isLogged">
+                                <button class="btn btn-outline-dark"
+                                    routerLink="/editar-experiencia/{{Experiencia.id}}">
+                                    <i class="uil uil-edit"></i>
+                                </button>
+                            </td>
+                            <td *ngIf="isLogged">
+                                <button class="btn btn-outline-danger" (click)="delete(Experiencia.id)">
+                                    <i class="uil uil-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
