@@ -1,23 +1,21 @@
-<div class="container p-4">
+<div class="container">
     <div class="row">
         <div class="col-md-4 mx-auto">
             <div class="card">
                 <div class="card-header">
-                    Cargar una Nueva Experiencia Laboral
+                    Cargar una Nueva Educacion
                 </div>
                 <form (ngSubmit)="onCreate()" #f="ngForm" novalidate>
                     <div class="card-body">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE"
-                                placeholder="Nombre de la Empresa" required>
+                            <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" placeholder="Nombre de la Institucion" required>
                         </div>
                         <br>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="descripcionE" name="descripcionE"
-                                [(ngModel)]="descripcionE" placeholder="Descripcion de la tarea" required>
+                            <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" placeholder="Descripcion de los estudios" required>
                         </div>
                         <br>
-                        <button class="btn btn-primary">GUARDAR</button>
+                        <button class="btn btn-primary"> GUARDAR </button>
                     </div>
                 </form>
             </div>
