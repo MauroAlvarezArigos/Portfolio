@@ -13,13 +13,13 @@
             <div class="col-lg-11">
                 <table class="table">
                     <tbody>
-                        <tr *ngFor="let e of edu">
+                        <tr *ngFor="let educacion of edu">
                             <td>
-                                <h3>{{e.nombreE}}</h3>
+                                <h3>{{educacion.nombre}}</h3>
                             </td>
-                            <td>{{e.descripcionE}}</td>
+                            <td>{{educacion.descripcion}}</td>
                             <td *ngIf="isLogged">
-                                <button class="btn btn-edit" routerLink="/editar-experiencia/{{e.id}}">
+                                <button class="btn btn-edit" routerLink="/editar-educacion/{{educacion.id}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon" height="24"
                                         width="24">
                                         <path
@@ -28,7 +28,7 @@
                                 </button>
                             </td>
                             <td *ngIf="isLogged">
-                                <button class="btn btn-delete" (click)="delete(e.id)">
+                                <button class="btn btn-delete" (click)="delete(educacion.id)">
                                     <svg viewBox="0 0 15 17.5" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
                                         class="icon">
                                         <path transform="translate(-2.5 -1.25)"

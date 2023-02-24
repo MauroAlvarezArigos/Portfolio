@@ -8,11 +8,11 @@
                 <form (ngSubmit)="onCreate()" #f="ngForm" novalidate>
                     <div class="card-body">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" placeholder="Nombre de la Institucion" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" placeholder="Nombre de la Institucion" required>
                         </div>
                         <br>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" placeholder="Descripcion de los estudios" required>
+                            <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" placeholder="Descripcion de los estudios" required>
                         </div>
                         <br>
                         <button class="btn btn-primary"> GUARDAR </button>

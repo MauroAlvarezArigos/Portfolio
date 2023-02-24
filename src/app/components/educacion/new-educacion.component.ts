@@ -9,8 +9,8 @@ import { EducacionService } from 'src/app/service/educacion.service';
     styleUrls: ['./new-educacion.component.css']
 })
 export class NewEducacionComponent implements OnInit {
-    nombreE: string = '';
-    descripcionE: string = '';
+    nombre: string;
+    descripcion: string;
 
     constructor(private eduService: EducacionService, private router: Router) { }
 
@@ -18,7 +18,7 @@ export class NewEducacionComponent implements OnInit {
     }
 
     onCreate(): void {
-        const edu = new Educacion(this.nombreE, this.descripcionE);
+        const edu = new Educacion(this.nombre, this.descripcion);
         this.eduService.save(edu).subscribe(data => {
             alert("Educacion guardada con exito!");
             this.router.navigate(['']);
