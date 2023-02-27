@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
     providedIn: 'root'
 })
 export class ExperienciaService {
-    xpURL = 'http://localhost:8080/experiencia/'
+    xpURL = 'http://portfoliobackendmaarigos.up.railway.app/experiencia/'
 
     constructor(private httpClient: HttpClient) { }
 

@@ -25,6 +25,27 @@ import { EditEducacionComponent } from './components/educacion/edit-educacion.co
 import { EditSkillComponent } from './components/skills/edit-skill.component';
 import { NewSkillComponent } from './components/skills/new-skill.component';
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCN7wiJh8mxI0B8mzdNKAV1nZ_y28njanw",
+  authDomain: "mauroalvarezarigos.firebaseapp.com",
+  projectId: "mauroalvarezarigos",
+  storageBucket: "mauroalvarezarigos.appspot.com",
+  messagingSenderId: "574516197318",
+  appId: "1:574516197318:web:e53d963152a9914ff124c7",
+  measurementId: "G-2K8199ZCGN"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
 
 @NgModule({
   declarations: [
