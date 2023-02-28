@@ -34,7 +34,7 @@ export class SkillsComponent implements OnInit {
                 alert("Skill eliminada con exito");
                 this.cargarSkills();
             }, err => {
-                alert("No se pudo eliminar la Experiencia");
+                alert("No se pudo eliminar la Skill");
             });
         }
     }

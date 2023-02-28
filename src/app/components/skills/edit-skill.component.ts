@@ -11,7 +11,7 @@ import { SkillsService } from 'src/app/service/skills.service';
 })
 export class EditSkillComponent implements OnInit{
     skill: Skills = null;
-    nombre: string;
+    nombre: string = null;
     constructor(private ss: SkillsService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
     ngOnInit(): void {
@@ -24,7 +24,7 @@ export class EditSkillComponent implements OnInit{
 
     onUpdate() {
         const id = this.activatedRoute.snapshot.params['id'];
-        this.skill.nombre = this.nombre;
+        if(this.nombre != null) this.skill.nombre = this.nombre;
         this.ss.update(id, this.skill).subscribe(data => {
             alert("Skill modificada con exito.");
             this.router.navigate(['']);

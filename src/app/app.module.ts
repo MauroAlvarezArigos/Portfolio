@@ -27,6 +27,9 @@ import { NewSkillComponent } from './components/skills/new-skill.component';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { EditAboutComponent } from './components/about/edit-about.component';
+import { NewProyectoComponent } from './components/proyectos/new-proyecto.component';
+import { EditProyectoComponent } from './components/proyectos/edit-proyecto.component';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -66,7 +69,10 @@ const app = initializeApp(firebaseConfig);
     NewEducacionComponent,
     EditEducacionComponent,
     EditSkillComponent,
-    NewSkillComponent
+    NewSkillComponent,
+    EditAboutComponent,
+    NewProyectoComponent,
+    EditProyectoComponent
   ],
   imports: [
     BrowserModule,

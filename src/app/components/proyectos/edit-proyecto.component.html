@@ -1,0 +1,39 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    Imagen de Proyecto Actual
+                </div>
+                <div class="card-body">
+                    <img src="data:image/png;base64, {{proyecto.imagen}}" width="150" height="150" alt="picture">
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    Modificar el Proyecto
+                </div>
+                <form (ngSubmit)="onUpdate()" #f="ngForm" novalidate>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="nuevaimg">Cambiar la foto de Proyecto</label>
+                            <input type="file" class="form-control-file" name="nuevaimg" id="nuevaimg"
+                                (change)="onFileSelected($event)">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="nombre" name="nombre"
+                                [(ngModel)]="proyecto.nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" [(ngModel)]="proyecto.descripcion" maxlength="255" name="descripcion" id="descripcion" cols="30" rows="10">{{proyecto.descripcion}}</textarea>
+                        </div>
+                        <br>
+                        <button class="btn btn-primary">GUARDAR</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
