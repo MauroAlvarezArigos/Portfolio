@@ -7,8 +7,8 @@ import { Proyectos } from '../model/proyectos';
     providedIn: 'root'
 })
 export class ProyectosService {
-    URL = 'http://localhost:8080/proyectos/';
-    //URL = 'http://portfoliobackendmaarigos.up.railway.app/proyectos/';
+    //URL = 'http://localhost:8080/proyectos/';
+    URL = 'https://mauroaarigosbackend.onrender.com/proyectos/';
 
     constructor(private httpClient: HttpClient) { }
 

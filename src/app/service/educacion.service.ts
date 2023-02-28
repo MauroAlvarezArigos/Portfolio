@@ -7,28 +7,28 @@ import { Educacion } from '../model/educacion';
     providedIn: 'root'
 })
 export class EducacionService {
-    eduURL = 'http://localhost:8080/educacion/';
-    //eduURL = 'http://portfoliobackendmaarigos.up.railway.app/educacion/';
+    //URL = 'http://localhost:8080/educacion/';
+    URL = 'https://mauroaarigosbackend.onrender.com/educacion/';
 
     constructor(private httpClient: HttpClient) { }
 
     public lista(): Observable<Educacion[]> {
-        return this.httpClient.get<Educacion[]>(this.eduURL + 'lista');
+        return this.httpClient.get<Educacion[]>(this.URL + 'lista');
     }
 
     public detail(id: number): Observable<Educacion> {
-        return this.httpClient.get<Educacion>(this.eduURL + `detail/${id}`);
+        return this.httpClient.get<Educacion>(this.URL + `detail/${id}`);
     }
 
     public save(edu: Educacion): Observable<any> {
-        return this.httpClient.post<any>(this.eduURL + 'create', edu);
+        return this.httpClient.post<any>(this.URL + 'create', edu);
     }
 
     public update(id: number, edu: Educacion): Observable<any> {
-        return this.httpClient.put<any>(this.eduURL + `update/${id}`, edu);
+        return this.httpClient.put<any>(this.URL + `update/${id}`, edu);
     }
 
     public delete(id: number): Observable<any> {
-        return this.httpClient.delete<any>(this.eduURL + `delete/${id}`);
+        return this.httpClient.delete<any>(this.URL + `delete/${id}`);
     }
 }
