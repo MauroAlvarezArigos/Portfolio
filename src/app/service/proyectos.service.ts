@@ -8,7 +8,7 @@ import { Proyectos } from '../model/proyectos';
 })
 export class ProyectosService {
     //URL = 'http://localhost:8080/proyectos/';
-    URL = 'https://mauroaarigosbackend.onrender.com/proyectos/';
+    URL = 'https://portfoliowebbackend.rj.r.appspot.com/proyectos/';
 
     constructor(private httpClient: HttpClient) { }
 

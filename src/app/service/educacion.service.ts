@@ -8,7 +8,7 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
     //URL = 'http://localhost:8080/educacion/';
-    URL = 'https://mauroaarigosbackend.onrender.com/educacion/';
+    URL = 'https://portfoliowebbackend.rj.r.appspot.com/educacion/';
 
     constructor(private httpClient: HttpClient) { }
 
